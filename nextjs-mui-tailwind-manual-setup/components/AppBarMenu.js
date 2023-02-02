@@ -20,10 +20,13 @@ export default function AppBarMenu(props) {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleSignOut = async (e) => {            
+  
+  }
 
   return (
     <React.Fragment>
@@ -37,11 +40,12 @@ export default function AppBarMenu(props) {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 43, height: 43 }} src={'https://randomuser.me/api/portraits/women/67.jpg'}/>                                          
+            <Avatar sx={{ width: 43, height: 43 }} src={'https://randomuser.me/api/portraits/women/67.jpg'}/>                            
+              
           </IconButton>
-        </Tooltip>        
+        </Tooltip>
+        
       </Box>
-
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
@@ -88,12 +92,15 @@ export default function AppBarMenu(props) {
           My Profile
         </MenuItem>
 
+
         <MenuItem >
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
+
+
      
         <Divider />
 
